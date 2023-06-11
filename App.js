@@ -21,16 +21,13 @@ export default class extends React.Component {
     
     console.log(data);
     const {main: {temp}, weather, sys: {country}, name} = data;
-    console.log(country);
-    console.log(name);
-    console.log(weather[0].description);
-    // const condition = "Clouds";
+
     this.setState({
       isLoading: false, 
       temp: temp, 
       condition: weather[0].main, 
       description: weather[0].description,
-      country: country,
+      country: country.replace(/[{()}]/g, '').toLowerCase(),
       location: name });
 
   }
@@ -60,8 +57,7 @@ export default class extends React.Component {
 
 
     return ( 
-      isLoading ? <Loading /> 
-      : <Weather  
+      isLoading ? <Loading /> : <Weather  
           temp={Math.round(temp)} 
           condition={condition}
           country={country}

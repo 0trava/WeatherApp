@@ -13,7 +13,7 @@ Link  - https://www.youtube.com/watch?v=6SvP_fUttHk
 <p>$ npm i axios</p> - AXIOS 
 <p>$ npm i prop-types</p> - PropTypes
 <p>$ expo install expo-linear-gradient</p> - LinearGradient fon
-
+<p>$ npm install country-flag-icons --save</p> - Flag for Country
 
 <p>Для відкриття меню на ОС Windows або Linux для емулятора Android потрібно натиснути - Ctrl+M</p>
 <p>Реєстрація на сайті погоди - https://openweathermap.org/</p>

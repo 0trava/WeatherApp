@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import React from 'react';
 
+const image = {uri: 'https://www.surfertoday.com/images/stories/current-temperature-outside.jpg'};
+
 
 
 export default function Loading() {
