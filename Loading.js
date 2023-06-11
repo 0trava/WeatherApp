@@ -5,7 +5,7 @@ import React from 'react';
 export default function Loading() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Loading weather status...</Text>
+      <Text style={styles.text}>Loading weather status...!</Text>
     </View>
   )
 }
