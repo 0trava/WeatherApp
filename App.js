@@ -7,8 +7,8 @@ import axios from 'axios';
 
 import Loading from './Loading';
 
-const API_KEY = '2002e58b1b63a441b83a6b24a53cf29a';
 const URL = 'https://api.openweathermap.org/data/2.5/weather?';
+const API_KEY = '2002e58b1b63a441b83a6b24a53cf29a';
 
 export default class extends React.Component {
   state = {
@@ -16,7 +16,7 @@ export default class extends React.Component {
   }
 
   getWeather = async(latitude, longitude) => {
-    const {data} = await axios.get(`${URL}lat=${latitude}&lon=${longitude}&appid=${API_KEY}`);
+    const {data} = await axios.get(`${URL}lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`);
     console.log(data);
   }
 
