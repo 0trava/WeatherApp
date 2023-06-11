@@ -6,7 +6,12 @@ import {Ionicons} from '@expo/vector-icons';
 export default function Weather({temp, condition}) {
   return (
     <View style={styles.container}>
-      <Text>{temp}</Text>
+      <View style={styles.halfConatiner}> 
+        <Ionicons name="cloud" size={90} color="black" />
+        <Text style={styles.temp}>{temp}°</Text>
+      </View>
+      <View style={styles.halfConatiner}> 
+      </View>
     </View>
   )
 }
@@ -22,6 +27,17 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+
+    },
+    halfConatiner: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    },
+
+    temp: {
+        fontSize: 42,
 
     }
 
