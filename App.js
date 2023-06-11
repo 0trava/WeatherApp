@@ -49,7 +49,7 @@ export default class extends React.Component {
 
 
     return ( 
-      isLoading ? <Loading /> : <Weather  temp={temp}/>
+      isLoading ? <Loading /> : <Weather  temp={Math.round(temp)}/>
   )}
 
 
