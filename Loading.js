@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
+
 export default function Loading() {
   return (
     <View style={styles.container}>
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
 
     text: {
         color: "#2c2c2c",
-        fontSize: 28,
+        fontSize: 24,
 
     }
 })

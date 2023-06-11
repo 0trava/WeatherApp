@@ -1,23 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Loading from './Loading';
+import React from 'react';
 
-export default function App() {
-  return (
-    <Loading/>
-  );
+export default class extends React.Component {
+
+  
+
+
+
+
+
+  render () {
+    return ( 
+      <Loading />
+  )}
+
+
+
+
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: 'black',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   text: {
-//     color:'white',
-//     fontSize: 24,
-
-//   }
-// });
