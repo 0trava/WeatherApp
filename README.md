@@ -1,8 +1,12 @@
 # Weather App with React Native
 
+<p>in work...</p>
 
-https://www.youtube.com/watch?v=6SvP_fUttHk
+Link  - https://www.youtube.com/watch?v=6SvP_fUttHk
 
 
+🌠 Initial commands:
 
-in work...
+<p>$ espo init [folder name]</p> - React-Native
+
+
