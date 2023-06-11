@@ -17,10 +17,21 @@ export default class extends React.Component {
   }
 
   getWeather = async(latitude, longitude) => {
-    const {data: {main: {temp}, weather}} = await axios.get(`${URL}lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`);
-    // console.log(data);
+    const {data} = await axios.get(`${URL}lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`);
+    
+    console.log(data);
+    const {main: {temp}, weather, sys: {country}, name} = data;
+    console.log(country);
+    console.log(name);
+    console.log(weather[0].description);
     // const condition = "Clouds";
-    this.setState({isLoading: false, temp: temp, condition: weather[0].main});
+    this.setState({
+      isLoading: false, 
+      temp: temp, 
+      condition: weather[0].main, 
+      description: weather[0].description,
+      country: country,
+      location: name });
 
   }
 
@@ -45,11 +56,18 @@ export default class extends React.Component {
   }
 
   render () {
-    const {isLoading, temp, condition} = this.state;
+    const {isLoading, temp, condition, country, location, description} = this.state;
 
 
     return ( 
-      isLoading ? <Loading /> : <Weather  temp={Math.round(temp)} condition={condition}/>
+      isLoading ? <Loading /> 
+      : <Weather  
+          temp={Math.round(temp)} 
+          condition={condition}
+          country={country}
+          location ={location}
+          description={description}
+           />
   )}
 
 
